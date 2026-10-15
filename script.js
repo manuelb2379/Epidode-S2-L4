@@ -17,7 +17,7 @@ function area(l1, l2) {
    return l1 * l2
 }
 
-console.log(area(3,4));
+console.log(area(3, 4));
 
 /* ESERCIZIO 2 — sommaPazza
    Funzione sommaPazza(a, b): ritorna a + b.
@@ -27,14 +27,14 @@ console.log(area(3,4));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let sommaPazza = function(a,b) {
+let sommaPazza = function (a, b) {
    if (a === b) {
-      return (a + b)*3;
+      return (a + b) * 3;
    }
    return (a + b)
 }
-console.log(sommaPazza(2,3));
-console.log(sommaPazza(4,4));
+console.log(sommaPazza(2, 3));
+console.log(sommaPazza(4, 4));
 
 
 
@@ -47,7 +47,7 @@ console.log(sommaPazza(4,4));
 /* SCRIVI QUI LA TUA RISPOSTA */
 function distanzaDa19(n) {
    if (n > 19) {
-      return Math.abs(n - 19)*3;
+      return Math.abs(n - 19) * 3;
    }
    return Math.abs(n - 19)
 }
@@ -64,9 +64,9 @@ console.log(distanzaDa19(25));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function dentroIntervallo(n) {
-   if (n >= 20 && n <= 100 || n === 400){
+   if (n >= 20 && n <= 100 || n === 400) {
       return true
-   } 
+   }
    return false
 }
 
@@ -83,7 +83,7 @@ console.log(dentroIntervallo(400));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function epify(testo) {
-   if (testo.startsWith ('EPICODE')) {
+   if (testo.startsWith('EPICODE')) {
       return testo
    }
    return 'EPICODE' + testo
@@ -98,8 +98,8 @@ console.log(epify('EPICODE l\'ho scelto io'));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function divisibilePer3o7(n) {  
-   if (n > 0 && n % 3 === 0 && n % 7 === 0){
+function divisibilePer3o7(n) {
+   if (n > 0 && n % 3 === 0 && n % 7 === 0) {
       return true
    }
    return false
@@ -115,6 +115,18 @@ console.log(divisibilePer3o7(63));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function invertiStringa(testo) {
+   let lettere = testo.split(' ');
+   let alContrario = [];
+
+   for (let i = lettere.length - 1; i>=0; i--) {
+      alContrario.push(lettere[i]);
+   }
+   return alContrario.join(' ');
+}
+
+console.log(invertiStringa('Epicode'));
+
 /* ESERCIZIO 8 — inizialiMaiuscole
    Funzione inizialiMaiuscole(frase): metti in maiuscolo la prima lettera di ogni parola.
    "ciao mondo" → "Ciao Mondo".
@@ -123,6 +135,17 @@ console.log(divisibilePer3o7(63));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function inizialiMaiuscole(frase){
+   let primaLettera = frase.split (' ');
+
+   for (let i = 0; i < primaLettera.length; i++){
+      primaLettera[i] = primaLettera[i].slice(0,1).toUpperCase() + primaLettera[i].slice(1);
+   }
+   return primaLettera.join(' ');
+}
+
+console.log(inizialiMaiuscole('ciao dario come va'));
+
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
    Usa slice. Prova con "EPICODE".
@@ -130,12 +153,20 @@ console.log(divisibilePer3o7(63));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function togliPrimoEUltimo(testo) {
+  return testo.slice (1, -1);
+}
+
+console.log(togliPrimoEUltimo('Epicode'));
+
 /* ESERCIZIO 10 — dammiCasuali
    Funzione dammiCasuali(n): ritorna un array di n numeri interi casuali tra 0 e 10 (inclusi).
    Usa Math.random e Math.floor.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
 
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
