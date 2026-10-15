@@ -166,7 +166,16 @@ console.log(togliPrimoEUltimo('Epicode'));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function dammiCasuali(n) {
+   let numbers = [];
 
+   for(let i = 0; i < n; i++) {
+      numbers.push(Math.floor(Math.random () * 11) );
+   }
+   return numbers
+}
+
+console.log(dammiCasuali(10));
 
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
