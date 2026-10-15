@@ -8,9 +8,16 @@ REGOLE
 /* ESERCIZIO 1 — area
    Funzione area(l1, l2) che ritorna l1 * l2.
    Stampa area(3, 4).
+
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function area(l1, l2) {
+   return l1 * l2
+}
+
+console.log(area(3,4));
 
 /* ESERCIZIO 2 — sommaPazza
    Funzione sommaPazza(a, b): ritorna a + b.
@@ -20,6 +27,17 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let sommaPazza = function(a,b) {
+   if (a === b) {
+      return (a + b)*3;
+   }
+   return (a + b)
+}
+console.log(sommaPazza(2,3));
+console.log(sommaPazza(4,4));
+
+
+
 /* ESERCIZIO 3 — distanzaDa19
    Funzione distanzaDa19(n): ritorna Math.abs(n - 19).
    Se n > 19: ritorna distanza * 3.
@@ -27,6 +45,16 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function distanzaDa19(n) {
+   if (n > 19) {
+      return Math.abs(n - 19)*3;
+   }
+   return Math.abs(n - 19)
+}
+
+console.log(distanzaDa19(5));
+console.log(distanzaDa19(25));
+
 
 /* ESERCIZIO 4 — dentroIntervallo
    Funzione dentroIntervallo(n):
@@ -34,6 +62,17 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function dentroIntervallo(n) {
+   if (n >= 20 && n <= 100 || n === 400){
+      return true
+   } 
+   return false
+}
+
+console.log(dentroIntervallo(19));
+console.log(dentroIntervallo(72));
+console.log(dentroIntervallo(400));
 
 /* ESERCIZIO 5 — epify
    Funzione epify(testo): aggiunge "EPICODE " davanti.
@@ -43,11 +82,30 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function epify(testo) {
+   if (testo.startsWith ('EPICODE')) {
+      return testo
+   }
+   return 'EPICODE' + testo
+}
+
+console.log(epify(' ha corsi impegnativi'));
+console.log(epify('EPICODE l\'ho scelto io'));
+
 /* ESERCIZIO 6 — divisibilePer3o7
    Funzione divisibilePer3o7(n): true se n positivo E divisibile per 3 O per 7.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function divisibilePer3o7(n) {  
+   if (n > 0 && n % 3 === 0 && n % 7 === 0){
+      return true
+   }
+   return false
+}
+
+console.log(divisibilePer3o7(63));
 
 /* ESERCIZIO 7 — invertiStringa
    Funzione invertiStringa(testo): ritorna la stringa invertita.
